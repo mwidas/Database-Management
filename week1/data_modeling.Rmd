@@ -1,0 +1,44 @@
+---
+title: "Data Modeling - Snow_Survey"
+author: "Melissa Widas"
+date: "2024-04-09"
+output: html_document
+---
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+
+snow <- read_csv(here("week1", "ASDN_Snow_survey.csv"))
+
+colnames(snow)
+```
+
+```{r}
+# CREATE TABLE ASDN_Snow_survey (
+#     Site TEXT,
+#       FOREIGN KEY (Site) References Site (Code)
+#     Year INTEGER NOT NULL,
+#     Date DATE NOT NULL,
+#     Plot TEXT NOT NULL,
+#     Location TEXT NOT NULL,
+#     Snow_cover REAL NOT NULL,
+#       CHECK (Snow_cover <= 100),
+#     Water_cover REAL NOT NULL
+#       CHECK (Water_cover <= 100),
+#     Land_cover REAL NOT NULL
+#       CHECK (Land_cover <= 100),
+#     Total_cover REAL NOT NULL
+#       CHECK (Total_cover = 100),
+#     Observer TEXT NOT NULL,
+#       FOREIGN KEY (Observer) References Personnel (Abbreviation)
+#     Notes
+# );
+```
+
+- Site is a foreign key for Site in the Code table
+- Snow_cover needs to be a value that is at or below 100 as it is a percent
+- Water_cover needs to be a value that is at or below 100 as it is a percent
+- Land_cover needs to be a value that is at or below 100 as it is a percent
+- Total_cover is the sum of Snow_cover, Water_cover, Land_cover and needs to equal 100 indicating 100 percent
+- Observer is a foreign key for Abbreviation in the Personnel table

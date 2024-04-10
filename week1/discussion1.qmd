@@ -1,0 +1,19 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Week 1
+
+## Discussion Section Format
+
+Flexible format Review course materials Dedicated time for homework
+questions
+
+Additional Office Hours if needed: Thursday 3-4, Bren 3031 By
+appointment: jkmiller@bren.ucsb.edu Use slack for questions outside of
+class hours
+
+
+
